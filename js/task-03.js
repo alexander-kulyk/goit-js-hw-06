@@ -20,9 +20,9 @@ console.log(galleryList.style);
 galleryList.style.display = "flex";
 galleryList.style.gap = "5px";
 
-const makeGallery  = images.map(({url, alt}) => {
-      return `<li class="gallery__item"><img src='${url}' alt='${alt}' width=320> </li>`
-}).join('');
+const makeGallery  = images.map(({url, alt}) => 
+`<li class="gallery__item"><img src='${url}' alt='${alt}' width=320> </li>`
+).join('');
 
 console.log('makeGallery',makeGallery);
 
