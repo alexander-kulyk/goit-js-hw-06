@@ -10,7 +10,7 @@ const boxes = document.querySelector('.boxes');
 createBtn.addEventListener('click',createBoxes);
 
 function createBoxes(amount) {
-
+  
 };
 
 
