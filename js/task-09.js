@@ -4,6 +4,7 @@
 // const spanColor = document.querySelector(".color");
 
 const refs = {
+body: document.querySelector("body"),
 changeColorBtn: document.querySelector(".change-color"),
 container: document.querySelector ('.widget'),
 spanColor: document.querySelector(".color"),
@@ -14,8 +15,8 @@ refs.changeColorBtn.addEventListener('click',changeColorBack);
 
 function changeColorBack(event) {
 
-  refs.container.style.backgroundColor = getRandomHexColor();
-  refs.spanColor.textContent = refs.container.style.backgroundColor;
+  refs.body.style.backgroundColor = getRandomHexColor();
+  refs.spanColor.textContent = refs.body.style.backgroundColor;
   
 };
 
