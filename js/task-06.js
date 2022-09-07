@@ -9,11 +9,11 @@ function onInputBlur(event) {
         
 
         input.classList.remove('invalid');
-        return input.classList.add('valid');
-    };
-
-    input.classList.remove('valid');
-    return input.classList.add('invalid');
+        input.classList.add('valid');
+    }else {
+        input.classList.remove('valid');
+        input.classList.add('invalid');
+    }; 
 
 };
 
