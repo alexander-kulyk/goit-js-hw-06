@@ -1,17 +1,39 @@
 
 
-const container = document.querySelector('#controls');
+const container = document.querySelector('#controls input');
 const createBtn = document.querySelector('button[data-create]');
 const destroyBtn = document.querySelector('button[data-destroy]');
-const boxes = document.querySelector('.boxes');
+const boxes = document.querySelector('#boxes');
+
 
 
 
 createBtn.addEventListener('click',createBoxes);
+destroyBtn.addEventListener('click',destroyBox);
 
-function createBoxes(amount) {
-  
+
+function createBoxes() {
+  const amount  = container.value;
+  let  boxSize = 30;
+
+  for (let i = 0,  boxSize = 30; i < amount; i++, boxSize += 10) {
+    const createEl = document.createElement('div');
+    createEl.style.width = `${boxSize}px`;
+    createEl.style.height = `${boxSize}px`;
+    createEl.style.backgroundColor = getRandomHexColor();
+    
+    boxes.append(createEl);
+    container.value = '';
+  };
+  boxes.style.display = 'flex';
+  boxes.style.gap = "5px";
+  boxes.style.marginTop = "10px";
 };
+
+
+function destroyBox() {
+  boxes.innerHTML='';
+}
 
 
 
