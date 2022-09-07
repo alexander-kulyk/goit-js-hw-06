@@ -7,14 +7,10 @@ input.addEventListener('input',  onInputText );
 
 
 function onInputText(event) {
+    return event.currentTarget.value === "" 
+    ?  titleSpan.textContent = 'Anonymous' 
+    : titleSpan.textContent = event.currentTarget.value;
 
-    if (event.currentTarget.value === "") {
-        return titleSpan.textContent = 'Anonymous'
-    };
-
-     return titleSpan.textContent = event.currentTarget.value;
-
-    // console.log(event.currentTarget.value);
 };
 
 
