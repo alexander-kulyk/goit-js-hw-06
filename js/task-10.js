@@ -14,7 +14,6 @@ destroyBtn.addEventListener('click',destroyBox);
 
 function createBoxes() {
   const amount  = container.value;
-  let  boxSize = 30;
 
   for (let i = 0,  boxSize = 30; i < amount; i++, boxSize += 10) {
     const createEl = document.createElement('div');
@@ -41,3 +40,4 @@ function destroyBox() {
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+// flex-wrap: wrap;
