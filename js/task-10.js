@@ -25,6 +25,7 @@ function createBoxes() {
     container.value = '';
   };
   boxes.style.display = 'flex';
+  boxes.style.flexWrap = 'wrap';
   boxes.style.gap = "5px";
   boxes.style.marginTop = "10px";
 };
