@@ -2,12 +2,12 @@
 
 const itemEl = document.querySelectorAll('#categories .item');
 
-console.log('Number of categories:',itemEl.length);
+console.log('Number of categories:',[...itemEl].length);
 
-itemEl.forEach(element =>{
+[...itemEl].map(element =>{
     
-    console.log('Category:',element.firstElementChild.innerHTML);
-    console.log("Elements:", element.lastElementChild.children.length)
+    console.log('Category:',element.firstElementChild.textContent);
+    console.log("Elements:", element.lastElementChild.children.length);
 });
 
 
